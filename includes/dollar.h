@@ -1,1 +1,4 @@
-class Dollar;
+class Dollar {
+ public:
+  Dollar(int amount);
+};
