@@ -1,4 +1,4 @@
-add_library(money money.cpp)
+add_library(money money.cpp dollar.cpp)
 
 target_include_directories(money PUBLIC ${CMAKE_SOURCE_DIR}/includes)
 
