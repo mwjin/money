@@ -34,5 +34,5 @@
 # IDE
 .vscode/
 
-# Debug Symbol File
-*.dSYM/
+# Build Outputs
+build/
