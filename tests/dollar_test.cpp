@@ -10,4 +10,7 @@ TEST(DollarTest, TestMultiplication) {
   EXPECT_EQ(15, product.amount);
 }
 
-TEST(DollarTest, TestEquality) { EXPECT_TRUE(Dollar(5).equals(Dollar(5))); }
+TEST(DollarTest, TestEquality) {
+  EXPECT_TRUE(Dollar(5).equals(Dollar(5)));
+  EXPECT_FALSE(Dollar(5).equals(Dollar(6)));
+}
