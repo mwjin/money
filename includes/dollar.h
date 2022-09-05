@@ -4,4 +4,5 @@ class Dollar {
   Dollar(int amount);
   Dollar times(int multiplier);
   bool equals(Dollar other);
+  bool operator==(Dollar& other);
 };
