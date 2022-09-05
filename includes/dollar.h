@@ -1,6 +1,6 @@
 class Dollar {
  public:
-  int amount{5 * 2};
+  int amount;
   Dollar(int amount);
   void times(int multiplier);
 };
