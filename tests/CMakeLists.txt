@@ -1,14 +1,14 @@
 add_executable(
-  dollar_test
-  dollar_test.cpp
+  money_test
+  money_test.cpp
 )
 
 target_link_libraries(
-  dollar_test
+  money_test
   GTest::gtest_main
   money
 )
 
-target_include_directories(dollar_test PRIVATE ${CMAKE_SOURCE_DIR}/includes)
+target_include_directories(money_test PRIVATE ${CMAKE_SOURCE_DIR}/includes)
 include(GoogleTest)
-gtest_discover_tests(dollar_test)
+gtest_discover_tests(money_test)
