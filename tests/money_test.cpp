@@ -1,6 +1,7 @@
+#include <gtest/gtest.h>
+
 #include "dollar.h"
 #include "franc.h"
-#include <gtest/gtest.h>
 
 TEST(MoneyTest, TestMultiplication) {
   Dollar five(5);
