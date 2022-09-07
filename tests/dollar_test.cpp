@@ -9,7 +9,6 @@ TEST(DollarTest, TestMultiplication) {
 }
 
 TEST(DollarTest, TestEquality) {
-  Dollar five(5), other(5), six(6);
-  EXPECT_TRUE(five == other);
-  EXPECT_FALSE(five == six);
+  EXPECT_TRUE(Dollar(5) == Dollar(5));
+  EXPECT_FALSE(Dollar(5) == Dollar(6));
 }
