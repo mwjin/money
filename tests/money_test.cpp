@@ -1,5 +1,5 @@
 #include "dollar.h"
-
+#include "franc.h"
 #include <gtest/gtest.h>
 
 TEST(MoneyTest, TestMultiplication) {
