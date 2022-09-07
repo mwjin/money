@@ -19,3 +19,8 @@ TEST(MoneyTest, TestFrancMultiplication) {
   EXPECT_TRUE(Franc(10) == five.times(2));
   EXPECT_TRUE(Franc(15) == five.times(3));
 }
+
+TEST(MoneyTest, TestFrancEquality) {
+  EXPECT_TRUE(Franc(5) == Franc(5));
+  EXPECT_FALSE(Franc(5) == Franc(6));
+}
