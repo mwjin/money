@@ -3,5 +3,5 @@ class Dollar {
   int amount;
   Dollar(int amount);
   Dollar times(int multiplier);
-  bool operator==(Dollar& other);
+  bool operator==(const Dollar& other);
 };
