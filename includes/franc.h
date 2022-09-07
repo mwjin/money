@@ -1,9 +1,7 @@
-class Franc {
+#include "money.h"
+
+class Franc : public Money {
  public:
   Franc(int amount);
   Franc times(int multiplier);
-  bool operator==(const Franc& other);
-
- private:
-  int amount;
 };
