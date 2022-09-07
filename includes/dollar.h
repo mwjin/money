@@ -1,8 +1,7 @@
 #include "money.h"
 
-class Dollar : Money {
+class Dollar : public Money {
  public:
   Dollar(int amount);
   Dollar times(int multiplier);
-  bool operator==(const Dollar& other);
 };
