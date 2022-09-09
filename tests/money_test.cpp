@@ -2,8 +2,6 @@
 
 #include <gtest/gtest.h>
 
-#include "franc.h"
-
 TEST(MoneyTest, TestMultiplication) {
   Money *five{Money::dollar(5)};
   EXPECT_TRUE(*Money::dollar(10) == *five->times(2));
@@ -16,16 +14,16 @@ TEST(MoneyTest, TestEquality) {
 }
 
 TEST(MoneyTest, TestFrancMultiplication) {
-  Franc five(5);
-  EXPECT_TRUE(Franc(10) == *five.times(2));
-  EXPECT_TRUE(Franc(15) == *five.times(3));
+  Money *five{Money::franc(5)};
+  EXPECT_TRUE(*Money::franc(10) == *five->times(2));
+  EXPECT_TRUE(*Money::franc(15) == *five->times(3));
 }
 
 TEST(MoneyTest, TestFrancEquality) {
-  EXPECT_TRUE(Franc(5) == Franc(5));
-  EXPECT_FALSE(Franc(5) == Franc(6));
+  EXPECT_TRUE(*Money::franc(5) == *Money::franc(5));
+  EXPECT_FALSE(*Money::franc(5) == *Money::franc(6));
 }
 
 TEST(MoneyTest, TestCompareDollarWithFranc) {
-  EXPECT_FALSE(Franc(5) == *Money::dollar(5));
+  EXPECT_FALSE(*Money::franc(5) == *Money::dollar(5));
 }

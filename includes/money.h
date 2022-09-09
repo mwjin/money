@@ -6,6 +6,7 @@ class Money {
   virtual bool operator==(const Money& other);
   virtual Money* times(int multiplier) = 0;
   static Money* dollar(int amount);
+  static Money* franc(int amount);
 
  protected:
   int amount;
