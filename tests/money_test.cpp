@@ -1,12 +1,14 @@
+#include "money.h"
+
 #include <gtest/gtest.h>
 
 #include "dollar.h"
 #include "franc.h"
 
 TEST(MoneyTest, TestMultiplication) {
-  Dollar five(5);
-  EXPECT_TRUE(Dollar(10) == *five.times(2));
-  EXPECT_TRUE(Dollar(15) == *five.times(3));
+  Money *five{Money::dollar(5)};
+  EXPECT_TRUE(Dollar(10) == *five->times(2));
+  EXPECT_TRUE(Dollar(15) == *five->times(3));
 }
 
 TEST(MoneyTest, TestEquality) {
