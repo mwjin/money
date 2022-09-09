@@ -3,7 +3,7 @@
 
 class Money {
  public:
-  bool operator==(const Money& other);
+  virtual bool operator==(const Money& other);
 
  protected:
   int amount;
