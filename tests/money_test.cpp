@@ -24,3 +24,7 @@ TEST(MoneyTest, TestFrancEquality) {
   EXPECT_TRUE(Franc(5) == Franc(5));
   EXPECT_FALSE(Franc(5) == Franc(6));
 }
+
+TEST(MoneyTest, TestCompareDollarWithFranc) {
+  EXPECT_FALSE(Franc(5) == Dollar(5));
+}
