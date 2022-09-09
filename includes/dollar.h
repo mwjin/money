@@ -3,5 +3,5 @@
 class Dollar : public Money {
  public:
   Dollar(int amount);
-  Dollar times(int multiplier);
+  Money times(int multiplier);
 };

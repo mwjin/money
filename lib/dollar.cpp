@@ -1,6 +1,6 @@
 #include "dollar.h"
 
 Dollar::Dollar(int amount) { this->amount = amount; };
-Dollar Dollar::times(int multiplier) {
+Money Dollar::times(int multiplier) {
   return Dollar(this->amount * multiplier);
 };
