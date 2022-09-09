@@ -5,8 +5,8 @@
 
 TEST(MoneyTest, TestMultiplication) {
   Dollar five(5);
-  EXPECT_TRUE(Dollar(10) == five.times(2));
-  EXPECT_TRUE(Dollar(15) == five.times(3));
+  EXPECT_TRUE(Dollar(10) == *five.times(2));
+  EXPECT_TRUE(Dollar(15) == *five.times(3));
 }
 
 TEST(MoneyTest, TestEquality) {
@@ -16,8 +16,8 @@ TEST(MoneyTest, TestEquality) {
 
 TEST(MoneyTest, TestFrancMultiplication) {
   Franc five(5);
-  EXPECT_TRUE(Franc(10) == five.times(2));
-  EXPECT_TRUE(Franc(15) == five.times(3));
+  EXPECT_TRUE(Franc(10) == *five.times(2));
+  EXPECT_TRUE(Franc(15) == *five.times(3));
 }
 
 TEST(MoneyTest, TestFrancEquality) {

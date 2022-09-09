@@ -4,6 +4,7 @@
 class Money {
  public:
   virtual bool operator==(const Money& other);
+  virtual Money* times(int multiplier) = 0;
 
  protected:
   int amount;
