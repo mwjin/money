@@ -2,8 +2,9 @@
 #define MONEY_H_
 
 class Money {
+  friend bool operator==(const Money& lhs, const Money& rhs);
+
  public:
-  virtual bool operator==(const Money& other);
   virtual Money* times(int multiplier) = 0;
   static Money* dollar(int amount);
   static Money* franc(int amount);
