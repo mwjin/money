@@ -12,4 +12,5 @@ bool operator==(const Money& lhs, const Money& rhs) {
   return lhs.amount == rhs.amount && typeid(lhs) == typeid(rhs);
 };
 
+bool operator!=(const Money& lhs, const Money& rhs) { return !(lhs == rhs); }
 void say_hello() { std::cout << "Hello, from Money!\n"; }

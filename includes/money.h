@@ -3,6 +3,7 @@
 
 class Money {
   friend bool operator==(const Money& lhs, const Money& rhs);
+  friend bool operator!=(const Money& lhs, const Money& rhs);
 
  public:
   virtual Money* times(int multiplier) = 0;
