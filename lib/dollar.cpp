@@ -1,6 +1,6 @@
 #include "dollar.h"
 
 Dollar::Dollar(int amount) { this->amount = amount; };
-Money* Dollar::times(int multiplier) {
-  return new Dollar(this->amount * multiplier);
+std::unique_ptr<Money> Dollar::times(int multiplier) {
+  return std::make_unique<Dollar>(this->amount * multiplier);
 };

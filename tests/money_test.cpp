@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 
 TEST(MoneyTest, TestMultiplication) {
-  Money *five{Money::dollar(5)};
+  std::unique_ptr<Money> five{Money::dollar(5)};
   EXPECT_EQ(*Money::dollar(10), *five->times(2));
   EXPECT_EQ(*Money::dollar(15), *five->times(3));
 }
@@ -14,7 +14,7 @@ TEST(MoneyTest, TestEquality) {
 }
 
 TEST(MoneyTest, TestFrancMultiplication) {
-  Money *five{Money::franc(5)};
+  std::unique_ptr<Money> five{Money::franc(5)};
   EXPECT_EQ(*Money::franc(10), *five->times(2));
   EXPECT_EQ(*Money::franc(15), *five->times(3));
 }

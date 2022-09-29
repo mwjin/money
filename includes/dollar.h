@@ -7,7 +7,7 @@ class Dollar : public Money {
  public:
   Dollar(int amount);
   virtual ~Dollar() = default;
-  virtual Money* times(int multiplier) override;
+  virtual std::unique_ptr<Money> times(int multiplier) override;
 };
 
 #endif

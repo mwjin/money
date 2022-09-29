@@ -7,7 +7,7 @@ class Franc : public Money {
  public:
   Franc(int amount);
   virtual ~Franc() = default;
-  virtual Money* times(int multiplier) override;
+  virtual std::unique_ptr<Money> times(int multiplier) override;
 };
 
 #endif
