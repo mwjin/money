@@ -6,7 +6,8 @@
 class Franc : public Money {
  public:
   Franc(int amount);
-  Money* times(int multiplier);
+  virtual ~Franc() = default;
+  virtual Money* times(int multiplier) override;
 };
 
 #endif

@@ -7,6 +7,7 @@ class Money {
 
  public:
   virtual Money* times(int multiplier) = 0;
+  virtual ~Money() = default;
   static Money* dollar(int amount);
   static Money* franc(int amount);
 
