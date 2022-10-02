@@ -12,7 +12,7 @@ class Money {
   Money(int amount, std::string currency);
   virtual ~Money() = default;
   virtual std::unique_ptr<Money> times(int multiplier) = 0;
-  virtual std::string currency() = 0;
+  std::string currency();
   static std::unique_ptr<Money> dollar(int amount);
   static std::unique_ptr<Money> franc(int amount);
 

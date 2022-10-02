@@ -8,6 +8,8 @@
 Money::Money(int amount, std::string currency)
     : amount{amount}, currency_{currency} {}
 
+std::string Money::currency() { return this->currency_; }
+
 std::unique_ptr<Money> Money::dollar(int amount) {
   return std::make_unique<Dollar>(amount);
 }

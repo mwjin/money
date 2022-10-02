@@ -8,7 +8,6 @@ class Dollar : public Money {
   Dollar(int amount);
   virtual ~Dollar() = default;
   virtual std::unique_ptr<Money> times(int multiplier) override;
-  virtual std::string currency() override;
 };
 
 #endif
