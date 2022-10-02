@@ -9,6 +9,7 @@ class Money {
   friend bool operator!=(const Money& lhs, const Money& rhs);
 
  public:
+  Money(int amount);
   virtual std::unique_ptr<Money> times(int multiplier) = 0;
   virtual std::string currency() = 0;
   virtual ~Money() = default;

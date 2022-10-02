@@ -5,6 +5,8 @@
 #include "dollar.h"
 #include "franc.h"
 
+Money::Money(int amount) : amount{amount} {}
+
 std::unique_ptr<Money> Money::dollar(int amount) {
   return std::make_unique<Dollar>(amount);
 }
