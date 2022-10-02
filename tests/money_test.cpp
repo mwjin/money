@@ -27,3 +27,8 @@ TEST(MoneyTest, TestFrancEquality) {
 TEST(MoneyTest, TestCompareDollarWithFranc) {
   EXPECT_NE(*Money::franc(5), *Money::dollar(5));
 }
+
+TEST(MoneyTest, TestCurrency) {
+  EXPECT_EQ("USD", Money::dollar(1)->currency());
+  EXPECT_EQ("CHF", Money::franc(1)->currency());
+}
