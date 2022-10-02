@@ -9,15 +9,16 @@ class Money {
   friend bool operator!=(const Money& lhs, const Money& rhs);
 
  public:
-  Money(int amount);
+  Money(int amount, std::string currency);
+  virtual ~Money() = default;
   virtual std::unique_ptr<Money> times(int multiplier) = 0;
   virtual std::string currency() = 0;
-  virtual ~Money() = default;
   static std::unique_ptr<Money> dollar(int amount);
   static std::unique_ptr<Money> franc(int amount);
 
  protected:
   int amount;
+  std::string currency_;
 };
 void say_hello();
 

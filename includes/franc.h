@@ -4,9 +4,6 @@
 #include "money.h"
 
 class Franc : public Money {
- private:
-  std::string currency_;
-
  public:
   Franc(int amount);
   virtual ~Franc() = default;
