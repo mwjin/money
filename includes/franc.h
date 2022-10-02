@@ -8,6 +8,7 @@ class Franc : public Money {
   Franc(int amount);
   virtual ~Franc() = default;
   virtual std::unique_ptr<Money> times(int multiplier) override;
+  virtual std::string currency() override;
 };
 
 #endif
