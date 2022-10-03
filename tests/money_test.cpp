@@ -32,3 +32,7 @@ TEST(MoneyTest, TestCurrency) {
   EXPECT_EQ("USD", Money::dollar(1)->currency());
   EXPECT_EQ("CHF", Money::franc(1)->currency());
 }
+
+TEST(MoneyTest, TestDifferentClassEquality) {
+  EXPECT_EQ(Money(1, "CHF"), *Money::franc(1));
+}
