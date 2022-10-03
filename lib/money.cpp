@@ -8,7 +8,9 @@
 Money::Money(int amount, std::string currency)
     : amount{amount}, currency_{currency} {}
 
-std::unique_ptr<Money> Money::times(int multiplier) { return nullptr; }
+std::unique_ptr<Money> Money::times(int multiplier) {
+  return std::make_unique<Money>(this->amount * multiplier, currency_);
+}
 
 std::string Money::currency() { return this->currency_; }
 

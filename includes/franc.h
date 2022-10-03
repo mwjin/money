@@ -7,7 +7,6 @@ class Franc : public Money {
  public:
   Franc(int amount);
   ~Franc() = default;
-  std::unique_ptr<Money> times(int multiplier);
 };
 
 #endif
