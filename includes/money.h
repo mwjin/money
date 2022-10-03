@@ -10,8 +10,8 @@ class Money {
 
  public:
   Money(int amount, std::string currency);
-  virtual ~Money() = default;
-  virtual std::unique_ptr<Money> times(int multiplier) = 0;
+  ~Money() = default;
+  std::unique_ptr<Money> times(int multiplier);
   std::string currency();
   static std::unique_ptr<Money> dollar(int amount);
   static std::unique_ptr<Money> franc(int amount);
