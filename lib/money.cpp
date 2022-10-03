@@ -22,7 +22,7 @@ std::unique_ptr<Money> Money::franc(int amount) {
 }
 
 bool operator==(const Money& lhs, const Money& rhs) {
-  return lhs.amount == rhs.amount && typeid(lhs) == typeid(rhs);
+  return lhs.amount == rhs.amount && lhs.currency_ == rhs.currency_;
 };
 
 bool operator!=(const Money& lhs, const Money& rhs) { return !(lhs == rhs); }
