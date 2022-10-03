@@ -25,3 +25,8 @@ bool operator==(const Money& lhs, const Money& rhs) {
 
 bool operator!=(const Money& lhs, const Money& rhs) { return !(lhs == rhs); }
 void say_hello() { std::cout << "Hello, from Money!\n"; }
+
+std::ostream& operator<<(std::ostream& os, const Money& obj) {
+  os << obj.amount << ' ' << obj.currency_;
+  return os;
+}
